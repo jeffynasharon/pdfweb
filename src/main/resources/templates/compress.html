@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Compress PDF</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>Compress PDF</header>
+
+<div class="container">
+    <div class="card">
+
+        <h1>Compress your PDF</h1>
+<form id="uploadForm" method="post" action="/compress" enctype="multipart/form-data">
+
+    <input type="file" name="file" required>
+
+    <select name="level">
+        <option value="low">Low Compression</option>
+        <option value="medium" selected>Medium Compression</option>
+        <option value="high">High Quality</option>
+    </select>
+
+    <button type="submit">Compress PDF</button>
+
+    <div id="progressContainer" style="display:none; margin-top:20px;">
+        <div style="width:100%; background:#eee; border-radius:5px;">
+            <div id="progressBar"
+                 style="width:0%; height:20px; background:#e5322d; border-radius:5px;"></div>
+        </div>
+        <p>Compressing... Please wait</p>
+    </div>
+
+</form>
+
+<script>
+document.getElementById("uploadForm").addEventListener("submit", function(){
+    document.getElementById("progressContainer").style.display = "block";
+
+    let width = 0;
+    let interval = setInterval(function(){
+        if(width >= 95){
+            clearInterval(interval);
+        } else {
+            width += 5;
+            document.getElementById("progressBar").style.width = width + "%";
+        }
+    }, 200);
+});
+</script>
+
+        <br>
+        <a href="/">← Back</a>
+
+    </div>
+</div>
+
+</body>
+</html>

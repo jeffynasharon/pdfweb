@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Merge PDF</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>Merge PDF</header>
+
+<div class="container">
+    <div class="card">
+
+        <h1>Merge Two PDFs</h1>
+
+        <form method="post" action="/merge" enctype="multipart/form-data">
+
+            <input type="file" name="file1" required>
+            <input type="file" name="file2" required>
+
+            <button type="submit">Merge PDFs</button>
+        </form>
+
+        <br>
+        <a href="/">← Back</a>
+
+    </div>
+</div>
+
+</body>
+</html>

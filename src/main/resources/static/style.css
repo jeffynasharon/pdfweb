@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff5f5;
+    text-align: center;
+}
+
+header {
+    background-color: #e5322d;
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 60px;
+}
+
+.card {
+    background: white;
+    width: 450px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    color: gray;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background-color: #e5322d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c62828;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 25px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.tool-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+a {
+    text-decoration: none;
+    color: #e5322d;
+    font-weight: bold;
+}

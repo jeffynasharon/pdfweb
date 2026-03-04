@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My PDF Tools</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>My PDF Tools</header>
+
+<div class="container">
+    <h1>Every tool you need to work with PDFs</h1>
+    <p>Select a tool below</p>
+
+    <div class="tool-grid">
+
+        <div class="tool-card" onclick="location.href='/compress'">
+            <h3>Compress PDF</h3>
+            <p>Reduce PDF file size</p>
+        </div>
+
+        <div class="tool-card" onclick="location.href='/merge'">
+            <h3>Merge PDF</h3>
+            <p>Combine two PDFs</p>
+        </div>
+
+        <div class="tool-card" onclick="location.href='/resize'">
+            <h3>Crop PDF</h3>
+            <p>Crop page size</p>
+        </div>
+
+        <div class="tool-card" onclick="location.href='/split'">
+            <h3>Split PDF</h3>
+            <p>Split by page</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Crop PDF</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>Crop PDF</header>
+
+<div class="container">
+    <div class="card">
+
+        <h1>Crop PDF Pages</h1>
+
+        <form method="post" action="/resize" enctype="multipart/form-data">
+
+            <input type="file" name="file" required>
+            <input type="number" name="width" placeholder="Width (e.g. 400)" required>
+            <input type="number" name="height" placeholder="Height (e.g. 600)" required>
+
+            <button type="submit">Crop PDF</button>
+        </form>
+
+        <br>
+        <a href="/">← Back</a>
+
+    </div>
+</div>
+
+</body>
+</html>
